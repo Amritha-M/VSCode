@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+  background-color: #e4b5e4;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+h2 {
+    font-size: 1.3em;
+  }
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+
+
+
+
+  
+  /* .sender-column {
+    text-align: right;
+  }
+  
+  
+  
+  h2 {
+    font-size: 1.3em;
+  }
+  
+  p,ul,ol,dl,address {
+    font-size: 1.1em;
+  }
+  
+  p, li, dd, dt, address {
+    line-height: 1.5;
+  } */
