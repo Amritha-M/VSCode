@@ -1,0 +1,42 @@
+.addnewitembody{
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    border: 2px solid whitesmoke;
+    width: 70%;
+    align-self: center;
+}
+
+.addnewitem{
+ margin:15px;
+}
+
+.addit{
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    height:100px;
+    padding: 10px;
+    align-items: center;
+}
+
+.additdiv{
+    width:45%;
+    height: 35px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.additbutton{
+    align-items: center;
+    height: 35px;
+    background-color:  rgb(88,81,217);
+    color: white;
+    border-radius: 6px;
+    border:0;
+    width:150px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,20 @@
+.itemlist{
+    display: flex;
+    flex-direction: column;
+}
+
+.itemlisthead{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.button{
+    height: 35px;
+    background-color:  rgb(88,81,217);
+    color: white;
+    border-radius: 6px;
+    border:0;
+}

@@ -1,0 +1,47 @@
+.customerlist{
+    display: flex;
+    flex-direction: column;
+}
+
+.customerlisthead{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.button{
+    height: 35px;
+    background-color:  rgb(88,81,217);
+    color: white;
+    border-radius: 6px;
+    align-items: center;
+    border:0;
+    width: 150px;
+}
+
+/* 
+.customerlist {
+    box-sizing: content-box;
+    background-color: rgba(240, 240, 240, 0.324);
+    padding: 10px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    height: 60px;
+    vertical-align: middle;
+    font-size:larger;
+}
+
+.addcust{
+    background-color: rgb(98, 50, 186);
+    color: white;
+    height: 30px;
+    vertical-align: middle;
+    font-size: large;
+} */

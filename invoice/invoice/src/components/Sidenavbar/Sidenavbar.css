@@ -1,0 +1,137 @@
+/* .sidenavbar{
+    box-sizing: content-box;
+    background-color: rgba(240, 240, 240, 0.324);
+    padding: 10px;
+} */
+
+
+.Sidenavbar{
+    border-right: rgb(88,81,217) solid 2px;
+    height: 94vh;
+    padding-top: 10px;
+    align-items: left;
+}
+
+.sidenavbaritemsactive svg:nth-of-type(2) {
+    display: none;
+  }
+
+.sidenavbaritems svg:nth-of-type(1) {
+    display: none;
+}
+
+.sidenavbaritem span {
+    display:flex;
+    width: 100%;
+    padding: 10px;
+    align-items: left;
+}
+
+  
+.sidenavbaritem svg {
+    margin-right: 10px;
+  }
+  
+.sidenavbaritem {
+    display: flex;
+    width:100%;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 5px 0px;
+  }
+  
+  .sidenavbaritemsactive {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    background-color: #FAFBFF;
+    color:  rgb(88,81,217);
+    cursor: pointer;
+    margin: 3px 0px;
+    width:100%;
+  }
+  
+  .sidenavbaritemsactive svg {
+    margin-right: 10px;
+  }
+  
+  .sidenavbaritemsactive {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    width:100%;
+  }
+  
+  .sidenavbaritemsactive span {
+    width: 100%;
+    flex-grow: 1;
+    padding: 10px;
+    border-left:  rgb(88,81,217) 3px solid;
+  }
+  
+  .sidenavbaritems span:hover {
+    padding: 10px;
+    border-left:  rgb(88,81,217)3px solid;
+    background-color: #E9EAED;
+    width:100%;
+  }
+  
+
+
+/* .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 320px;
+    background-color: #fff;
+
+    &__logo {
+        display: grid;
+        place-items: center;
+        height: 120px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: 'Mochiy Pop P one', sans-serif;
+    }
+
+    &__menu {
+        position: relative;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            place-content: flex-start;
+            padding: 1rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #555555;
+            transition: color 0.3s ease-in-out;
+
+            &.active {
+                color: #fff;
+            }
+
+            &__icon {
+                margin-right: 1rem;
+
+                i {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+
+        &__indicator {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: calc(100% - 40px);
+            border-radius: 10px;
+            background-color: #308efe;
+            z-index: -1;
+            transform: translateX(-50%);
+            transition: 0.3s ease-in-out;
+        }
+    }
+} */
