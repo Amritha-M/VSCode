@@ -1,0 +1,22 @@
+.invoicelist{
+    display: flex;
+    flex-direction: column;
+}
+
+.invoicelisthead{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    vertical-align: middle;
+    align-items: center;
+}
+.invoicebody{
+    padding: 10px;
+}
+.button{
+    height: 35px;
+    background-color:  rgb(88,81,217);
+    color: white;
+    border-radius: 6px;
+    border:0;
+}

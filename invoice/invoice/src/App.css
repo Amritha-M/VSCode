@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.appheader{
+  width: 100%;
+  background-color: rgb(88,81,217);
+  color: black;
+  height:40px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.appcontent{
+  display: flex;
+}
+
+.appsidenavbar{
+  width: 20%;
+}
+
+.appbody{
+  display: block;
+  width: 80%;
+  border-left: 1px;
+  border-color: rgb(245,246,250);
+  background-color:rgb(250,251,255);
+  height: 100vw;
+  border-left: 2px solid rgb(245,246,250);
+}

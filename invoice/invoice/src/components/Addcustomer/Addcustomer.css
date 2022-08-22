@@ -1,0 +1,84 @@
+.addnewcustomerbody{
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+    border: 2px solid whitesmoke;
+    width: 70%;
+    align-self: center;
+}
+
+.addnewcustomer{
+ margin:15px;
+}
+
+.addcus{
+    display:flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    height:100px;
+    padding: 10px;
+    align-items: center;
+}
+
+.addcusdiv{
+    width:45%;
+    height: 35px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addcusbutton{
+    align-items: center;
+    height: 35px;
+    background-color:  rgb(88,81,217);
+    color: white;
+    border-radius: 6px;
+    border:0;
+    width:150px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+/* .main
+{
+    box-sizing: content-box;
+    flex: auto;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.addcustomer{
+    box-sizing: content-box;
+    background-color: rgba(200, 200, 200, 0.324);
+    padding: 10px;
+    width:max-content;
+    justify-content: space-between;
+
+}
+
+.addcusthead{
+    font-weight: 600;
+
+}
+.custbody{
+    padding: 10px;
+    background-color: white;
+    border: 10px;
+    max-width: max-content;
+    vertical-align:middle;
+    justify-content: space-between;
+
+}
+.addcust{
+    border-radius: 4px;
+} */
