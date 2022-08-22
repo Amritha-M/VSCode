@@ -25,7 +25,7 @@ function Item() {
                <h2>List of Items</h2> 
                <button type="button" className="button" onClick={addItem}> + New Item</button>
             </div>
-            <div className="Itembody">
+            <div className="itembody">
                 <Table data={data}/>
             </div>
         </div>

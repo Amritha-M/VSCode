@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.customerbody{
+    padding:10px;
+}
+
 .button{
     height: 35px;
     background-color:  rgb(88,81,217);
