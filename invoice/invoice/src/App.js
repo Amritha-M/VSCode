@@ -4,6 +4,7 @@ import React from 'react';
 import Appheader from './components/Appheader/Appheader'
 import Sidenavbar from './components/Sidenavbar/Sidenavbar';
 import { BrowserRouter} from "react-router-dom"
+import { withCustomStore } from './Store';
 
 
 
@@ -27,8 +28,7 @@ function App() {
   )
 }
 
-export default App;
-
+export default withCustomStore(App);
 
 
 

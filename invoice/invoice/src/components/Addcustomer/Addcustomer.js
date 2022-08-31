@@ -1,78 +1,106 @@
 import React from "react";
-import './Addcustomer.css'
-import {useNavigate} from "react-router-dom"
-import { useState, useEffect } from "react";
-import {SaveFill} from "react-bootstrap-icons"
-import { useContext, useRef} from "react";
+import "./Addcustomer.css";
+import { useNavigate } from "react-router-dom";
+import { useState, useRef } from "react";
+import { SaveFill } from "react-bootstrap-icons";
+import { addCustomerAPI } from "../../API";
 
-function Addcustomer() {
-      let navigate = useNavigate();
-      const saveCustomer = (e) =>
-      {
-          navigate('/');
-      }
-      return(
-        <div className="addnewcustomer">
-              <div className="addnewcustomerhead">
-                 <h2>Add New Customers</h2> 
-              </div>
-              <div className="addnewcustomerbody">
-              <form action="" className="addcus">
-                    <div className="addcusdiv">
-                      <label>Name:   </label>
-                      <input type="text" name="name" required placeholder="Name"
-                    pattern="[a-zA-Z][a-zA-Z0-9-_]{3,23}"/>
-                    </div>
-                    <div className="addcusdiv">
-                      <label>Phone: 
-                      </label><input type="text" name="name" />
-                    </div>
-                    <div className="addcusdiv">
-                      <label>Email: 
-                      </label><input type="text" name="name" />
-                    </div>
-                    <div className="addcusdiv">
-                      <button type="button" className="addcusbutton" onClick={saveCustomer} > 
-                      <span>
-                        <SaveFill/>  
-                      </span> Save Customer</button> 
-                    </div>     
-              </form>
-            </div>
+const Addcustomer = () => {
+  const nameRef = useRef("");
+  const phoneRef = useRef("");
+  const emailRef = useRef("");
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const newCustomer = {
+      id: 0,
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      phone_number: phoneRef.current.value,
+      created: 0,
+    };
+
+    console.log(e);
+    addCustomerAPI(newCustomer).then(() => {
+      alert("Sucessfully Submitted");
+    });
+    navigate(-1);
+  };
+  const [focused, setFocused] = useState(false);
+  const handleFocus = (e) => {
+    setFocused(true);
+  };
+
+  let navigate = useNavigate();
+
+  return (
+    <div className="addnewcustomer">
+      <div className="addnewcustomerhead">
+        <h2>New Customer</h2>
+      </div>
+      <div className="addnewcustomerbody">
+        <form onSubmit={onSubmit} className="addcus">
+          <div className="addcusdiv">
+            <label htmlFor="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Name"
+              ref={nameRef}
+              pattern="[a-zA-Z][a-zA-Z0-9-_]{3,23}"
+              focused={focused.toString()}
+            />
+            <span>
+              Name should be minimum 4-24 characters long and not contain
+              special characters.
+            </span>
           </div>
-      )
-}
+          <div className="addcusdiv">
+            <label htmlFor="phone">Phone: </label>
+            <input
+              type="number"
+              name="phone"
+              ref={phoneRef}
+              required
+              pattern="[1-9]{1}[0-9]{9}"
+              onBlur={handleFocus}
+              focused={focused.toString()}
+            />
+            <span>
+              Phone number should be 10 digit long and only contain numbers.
+            </span>
+          </div>
+          <div className="addcusdiv">
+            <label htmlFor="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              ref={emailRef}
+              required
+              focused={focused.toString()}
+            />
+            <span>It should be a valid email address.</span>
+          </div>
+          <div className="addcusdiv">
+            <button type="submit" className="addcusbutton">
+              <SaveFill />
+              Save Customer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
 export default Addcustomer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import './Addcustomer.css'
 // import {useNavigate} from "react-router-dom"
 // import { useState, useEffect } from "react";
 // import {SaveFill} from "react-bootstrap-icons"
-
 
 // function Addcustomer() {
 //     let navigate = useNavigate();
@@ -118,14 +146,14 @@ export default Addcustomer;
 //         errors.password = "Phonenumber is required";
 //       } else if (values.phonenumber.length !== 10) {
 //         errors.password = "Phonenumber must be 10 characters";
-//       } 
+//       }
 //       return errors;
 //     };
 
 //       return(
 //           <div className="addnewcustomer">
 //               <div className="addnewcustomerhead">
-//                  <h2>Add New Customers</h2> 
+//                  <h2>Add New Customers</h2>
 //               </div>
 //               <div className="addnewcustomerbody">
 //                 <form action="" className="addcus">
@@ -142,11 +170,11 @@ export default Addcustomer;
 //                         </label>
 //                       </div>
 //                       <div className="addcusdiv">
-//                         <button type="button" className="addcusbutton" onClick={saveCustomer} > 
+//                         <button type="button" className="addcusbutton" onClick={saveCustomer} >
 //                         <span>
-//                           <SaveFill/>  
-//                         </span> Save Customer</button> 
-//                       </div>     
+//                           <SaveFill/>
+//                         </span> Save Customer</button>
+//                       </div>
 //                 </form>
 //               </div>
 //           </div>
@@ -154,17 +182,8 @@ export default Addcustomer;
 // };
 // export default Addcustomer;
 
-
-
-
-
-
-
-
-
-
-
-{/* <div className="addnewcustomer">
+{
+  /* <div className="addnewcustomer">
 <div className="addnewcustomerhead">
    <h2>Add new customers</h2> 
 </div>
@@ -175,7 +194,8 @@ export default Addcustomer;
           Name:<input type="text" name="customername" placeholder="Name" value={formValues.username} onChange={handleChange}/>
           </label>
           {/* <label>Name:   <input type="text" name="name" />
-          </label> */}
+          </label> */
+}
 //         </div>
 //         <div className="addcusdiv">
 //           {/* <label>
@@ -188,18 +208,18 @@ export default Addcustomer;
 //           </label>  */}
 //         </div>
 //         <div>
-//     <button type="button" className="addcusbutton" onClick={saveCustomer} > Save Customer </button> 
+//     <button type="button" className="addcusbutton" onClick={saveCustomer} > Save Customer </button>
 //   </div>
 //   </form>
 //   <br/>
 // </div>
-// </div> 
+// </div>
 
-
-{/* <header className='App-header'>
+{
+  /* <header className='App-header'>
         <Router />
-      </header> */}
-
+      </header> */
+}
 
 //       import React from "react";
 // import Sidenavbar from "../Sidenavbar/Sidenavbar";
@@ -208,7 +228,6 @@ export default Addcustomer;
 // import './Addcustomer.css'
 // import { useNavigate } from "react-router-dom";
 
-
 //   function Addcustomer() {
 //     let navigate = useNavigate();
 
@@ -216,14 +235,14 @@ export default Addcustomer;
 //         navigate('/');
 //     }
 //     return (
-//         <div className='main'> 
+//         <div className='main'>
 //           <h1 className='header'>List Saved Customers</h1>
 //           <br></br>
 //           <div className='content'>
-//             <div className='sidenavbar'> 
+//             <div className='sidenavbar'>
 //               <Sidenavbar />
 //             </div>
-//             <div className='addcustomer'> 
+//             <div className='addcustomer'>
 //               <div className="addcusthead">
 //                 <p>New Customer</p>
 //               </div>
@@ -241,11 +260,11 @@ export default Addcustomer;
 //                 </form>
 //                 <br/>
 //                 <div>
-//                       <button type="button" className="addcust" onClick={saveCustomer} > Save Customer </button> 
+//                       <button type="button" className="addcust" onClick={saveCustomer} > Save Customer </button>
 //                   </div>
 //               </div>
 //             </div>
-//           </div> 
+//           </div>
 //         </div>
 //       )
 // }
@@ -254,11 +273,3 @@ export default Addcustomer;
 // // root.render(<Addcustomer />);
 
 // export default Addcustomer;
-
-
-
-
-
-
-
-
